@@ -1,1 +1,5 @@
-<p>cliente-list works!</p>
+<h5>Lista de clientes</h5>
+<mat-spinner *ngIf="service.loading"></mat-spinner>
+<div *ngFor="let cliente of clientes">
+    {{ cliente.nome }}
+</div>
