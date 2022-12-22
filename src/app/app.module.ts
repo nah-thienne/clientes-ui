@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ClienteListComponent } from './cliente/cliente-list/cliente-list.component';
 import { ClienteFormComponent } from './cliente/cliente-form/cliente-form.component';
+import { ClienteDeleteComponent } from './cliente/cliente-delete/cliente-delete.component';
+import { ConfirmDialogComponent } from './shared/confirm-dialog/confirm-dialog.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -19,16 +21,21 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { ClienteDeleteComponent } from './cliente/cliente-delete/cliente-delete.component';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ClienteListComponent,
     ClienteFormComponent,
-    ClienteDeleteComponent
+    ClienteDeleteComponent,
+    ConfirmDialogComponent
   ],
+  entryComponents: [ConfirmDialogComponent],
+
   imports: [
     AppRoutingModule,
     BrowserModule,
@@ -43,7 +50,12 @@ import { ClienteDeleteComponent } from './cliente/cliente-delete/cliente-delete.
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule,
+    MatDialogModule,
+    MatCardModule,
+    MatSelectModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

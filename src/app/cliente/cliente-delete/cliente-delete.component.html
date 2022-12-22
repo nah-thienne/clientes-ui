@@ -1,8 +1,31 @@
-<h5>Deleção de clientes</h5>
+<h2 mat-dialog-title>Deleção de clientes</h2>
+
+<h3 mat-dialog-title>Deleção por id:</h3>
 <form (ngSubmit)="deletar()" action="">
+    <mat-label>Id:</mat-label>
     <mat-form-field>
-        <mat-label>ID: </mat-label>
         <input name="id" matInput [(ngModel)]="id" placeholder="Informe o id">
     </mat-form-field>
-    <button mat-flat-button color="primary">Deletar</button>
+    <div mat-dialog-actions>
+        <button mat-flat-button color="primary">Deletar</button>
+    </div>
+</form>
+
+<br />
+<br />
+<br />
+
+<h3 mat-dialog-title>Deleção por nome:</h3>
+<form (ngSubmit)="deletar()" action="">
+    <mat-label>Cliente</mat-label>
+    <mat-form-field appearance="fill">
+        <mat-select [(value)]="idSelecionado" placeholder="Escolha o nome">
+            <mat-option *ngFor="let cliente of clientes" [value]="cliente.id">
+                {{cliente.nome}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div mat-dialog-actions>
+        <button mat-flat-button color="primary">Deletar</button>
+    </div>
 </form>
