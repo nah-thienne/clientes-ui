@@ -1,0 +1,8 @@
+<h5>Cadastro de clientes</h5>
+<form (ngSubmit)="salvar()" action="">
+    <mat-form-field>
+        <mat-label>Nome: </mat-label>
+        <input name="nome" matInput [(ngModel)]="cliente.nome" placeholder="Informe um nome">
+    </mat-form-field>
+    <button mat-flat-button color="primary">Salvar</button>
+</form>

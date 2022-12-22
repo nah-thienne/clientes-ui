@@ -1,0 +1,8 @@
+<h5>Deleção de clientes</h5>
+<form (ngSubmit)="deletar()" action="">
+    <mat-form-field>
+        <mat-label>ID: </mat-label>
+        <input name="id" matInput [(ngModel)]="id" placeholder="Informe o id">
+    </mat-form-field>
+    <button mat-flat-button color="primary">Deletar</button>
+</form>
